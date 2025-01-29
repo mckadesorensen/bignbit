@@ -28,7 +28,7 @@ case $key in
     -v|--tf-venue)
     tf_venue="$2"
     case $tf_venue in
-     sit|uat|ops) ;;
+     dev|sit|uat|ops) ;;
      *)
         echo "tf_venue must be sit, uat, or ops"
         exit 1;;
@@ -48,7 +48,7 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 TF_IN_AUTOMATION=true
 
 # Terraform initialization
-terraform init -reconfigure -input=false -backend-config="bucket=podaac-services-${tf_venue}-terraform"
+terraform init -reconfigure -input=false -backend-config="bucket=dms-bignbit-dev"
 
 if [[ "${ticket}" ]]; then
   set +e

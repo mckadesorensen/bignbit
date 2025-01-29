@@ -18,6 +18,7 @@ container-shell:
 		--env PS1='\s-\v:\w\$$ ' \
 		--env HISTFILE="/bignbit/.container_bash_history" \
 		-v "${PWD}":/bignbit \
+		-v "${HOME}/.docker":/.docker \
 		-v "${HOME}/.aws":/.aws \
 		-v "${HOME}/.cache/pip":/.cache/pip \
 		-v /var/run/docker.sock:/var/run/docker.sock \

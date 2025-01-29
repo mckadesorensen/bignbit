@@ -9,13 +9,13 @@ variable "permissions_boundary_arn" {
 
 variable "edl_user" {
   type = string
-  default = "urs_podaaccloud_user"
+  default = "urs_asf_user"
   description = "Earth Data login username ssm parameter from shared infrastructure"
 }
 
 variable "edl_pass" {
   type = string
-  default = "urs_podaaccloud_pass"
+  default = "urs_asf_pass"
   description = "Earth Data login password ssm parameter from shared infrastructure"
 }
 
