@@ -5,7 +5,7 @@ image:
 	docker build -f Dockerfile \
 		--platform linux/amd64 \
 		--no-cache \
-		-t bignbit:v1 \
+		--tag bignbit:v1 \
 		--build-arg USER=`id -u` .
 
 
@@ -22,4 +22,5 @@ container-shell:
 		-v "${HOME}/.cache/pip":/.cache/pip \
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		--name=bignbit \
-		bignbit:v1
+		bignbit:v1 \
+		bash
