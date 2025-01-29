@@ -7,7 +7,7 @@ ENV TERRAFORM_VERSION="1.9.2"
 RUN dnf install -y docker
 
 # CLI tools
-RUN dnf install -y zip
+RUN dnf install -y zip make
 # Terraform
 RUN \
         curl "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" -o "terraform.zip" && \

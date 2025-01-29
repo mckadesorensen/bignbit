@@ -24,3 +24,15 @@ container-shell:
 		--name=bignbit \
 		bignbit:v1 \
 		bash
+
+.PHONY: init
+init:
+	cd /bignbit/examples/cumulus-tf
+	pwd
+	terraform init -backend=false -upgrade
+	terraform validate -no-color
+
+
+.PHONY: deploy
+deploy: init
+	pass
